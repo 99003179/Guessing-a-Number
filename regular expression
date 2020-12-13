@@ -1,0 +1,41 @@
+import random
+import re
+class details:
+    x="greeshma94@gmail.com"
+    r1=re.match("[[a-z]+[0-9]+@[a+z]+.[a-z]+",x)
+
+class guess:
+        
+    class personaldetails:
+        def __init__(self):
+            print("enter your name")
+            self.name = input()
+
+        def print(self):
+            print ("your name is ", self.name)
+
+    def guess1(self):
+        win = False
+        Turns = 0
+        while win == 0:
+            print("Enter a number between 1 and 100")
+            self.num = input()
+            random_number = random.randint(1, 100)
+            Turns += 1
+            if random_number == int(self.num):
+                print("You won!")
+                print("Number of turns you have used: ", Turns)
+                win == 1
+                break
+            else:
+                if random_number >= int(self.num):
+                    print("Your Guess was low, Please enter a higher number")
+                
+                else:
+                    print("your guess was high, please enter a lower number")
+                    
+obj1 = guess.personaldetails()
+obj1.print()
+obj=details()
+print(obj.r1)
+obj = guess()
